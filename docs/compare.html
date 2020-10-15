@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>Containerization</title>
+    <title>VM's vs. Containers</title>
 </head>
 <body>
 
@@ -19,7 +19,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-            <li class="nav-item active">
+            <li class="nav-item ">
                 <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
@@ -33,9 +33,9 @@
                     All things Docker
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item " href="virtualization.html">What is Virtualization?</a>
-                    <a class="dropdown-item active" href="containerization.html">What is Containerization?</a>
-                    <a class="dropdown-item" href="compare.html">Lets Compare Both</a>
+                    <a class="dropdown-item" href="virtualization.html">What is Virtualization?</a>
+                    <a class="dropdown-item" href="containerization.html">What is Containerization?</a>
+                    <a class="dropdown-item active" href="">Lets Compare Both</a>
                     <a class="dropdown-item" href="">Setting up a web server to use Docker</a>
                     <a class="dropdown-item" href="">Basic Linux Commands</a>
                     <a class="dropdown-item" href="">Setting up Docker with Pycharm</a>
@@ -51,38 +51,55 @@
     <div class="row">
         <div class="col-10">
 
-            <h1>Containerization</h1>
+            <h1>Vm's vs. Containers: </h1>
             <p>
-                The goal of containerization, at its core, is to offer a better way to create, package, and deploy
-                software across different environments in a predictable and easy-to-manage way. Containers are an
-                operating system virtualization technology used to package applications and their dependencies and run
-                them in isolated environments. They provide a lightweight method of packaging and deploying applications
-                in a standardized way across many different types of infrastructure.</p>
-            <p>Containers are an executable unit of software in which application code is packaged, along with its
-                libraries and dependencies, in common ways so that it can be run anywhere, whether it be on desktop,
-                traditional IT, or the cloud.</p>
-            <h2>Benefits of Containers:</h2>
+                Virtualization enables you to run multiple operating systems on the hardware of a single physical
+                server, while containerization enables you to deploy multiple applications using the same operating
+                system on a single virtual machine or server. </p>
+            <p>Virtual machines are great for supporting applications that require an operating system’s full
+                functionality when you want to deploy multiple applications on a server, or when you have a wide variety
+                of operating systems to manage. Containers are a better choice when your biggest priority is to minimize
+                the number of servers you’re using for multiple applications.</p>
+            <p>With containerization, developers don’t need to write application code into different VMs operating
+                different app components to retrieve compute, storage, and networking resources.</p>
+            <p>Virtual machines are commonly used for demanding applications, network infrastructure, and apps that will
+                consume most of the resources of the VM.
+            <p>
 
-            <ul>
-                <li>Lightweight:</li>
-                <p>Their smaller size, especially compared to virtual machines, means they can spin up quickly and
-                    better support cloud-native applications that scale horizontally.</p>
-                <li>Portable and platform independent:</li>
-                <p>Containers carry all their dependencies with them, meaning that software can be written once and then
-                    run without needing to be re-configured across laptops, cloud, and on-premises computing
-                    environments.</p>
-                            </ul>
-
-            &nbsp;&nbsp;
-
-            <a href=https://www.dnsstuff.com/what-is-vm-virtual-machine> <img src= "images/containers.png"></a>
-
+            <p>Containers are commonly used for web, applications and caching services, network daemons, and small databases</p>
+             &nbsp;&nbsp;
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="row">VM's:</th>
+                    <th scope="row">Containers:</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="col">Heavyweight</th>
+                    <th scope="col">Lightwight</th>
+                </tr>
+                <tr>
+                    <th scope="col">Limited performance</th>
+                    <th scope="col">Native performance</th>
+                </tr>
+                <tr>
+                    <th scope="col">Each VM runs in its own OS</th>
+                    <th scope="col">All containers share the host OS</th>
+                </tr>
+                <tr>
+                    <th scope="col">Fully isolated and hence more secure</th>
+                    <th scope="col">Process-level isolation, possibly less secure</th>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
 
 
-    <footer class="text-center mt-5 p-3 mb-2 bg-dark text-white">
+    <footer class="text-center mt-10 p-3 mb-2 bg-dark text-white">
 
     </footer>
     <!-- Optional JavaScript -->
