@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>Virtualization</title>
+    <title>Containerization</title>
 </head>
 <body>
 
@@ -33,8 +33,8 @@
                     All things Docker
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item active" href="virtualization.html">What is Virtualization?</a>
-                    <a class="dropdown-item" href="containerization.html">What is Containerization?</a>
+                    <a class="dropdown-item " href="virtualization.html">What is Virtualization?</a>
+                    <a class="dropdown-item active" href="containerization.html">What is Containerization?</a>
                     <a class="dropdown-item" href="">Lets Compare Both</a>
                     <a class="dropdown-item" href="">Setting up a web server to use Docker</a>
                     <a class="dropdown-item" href="">Basic Linux Commands</a>
@@ -51,42 +51,31 @@
     <div class="row">
         <div class="col-10">
 
-            <h1>Virtualization, Virtual Machines (VM)</h1>
+            <h1>Containerization</h1>
             <p>
-                A virtual computer system is known as a “virtual machine” (VM): a tightly isolated software container
-                with an operating system and application inside. Each self-contained VM is completely independent.
-                Putting multiple VMs on a single computer enables several operating systems and applications to run on
-                just one physical server, or “host.”</p>
-            <p>Today, virtualization is a standard practice in enterprise IT architecture. It is also the technology
-                that drives cloud computing economics. Virtualization enables cloud providers to serve users with their
-                existing physical computer hardware; it enables cloud users to purchase only the computing resources
-                they need when they need it, and to scale those resources cost-effectively as their workloads grow.</p>
-           <h2>Benefits of virtualization</h2>
+                The goal of containerization, at its core, is to offer a better way to create, package, and deploy
+                software across different environments in a predictable and easy-to-manage way. Containers are an
+                operating system virtualization technology used to package applications and their dependencies and run
+                them in isolated environments. They provide a lightweight method of packaging and deploying applications
+                in a standardized way across many different types of infrastructure.</p>
+            <p>Containers are an executable unit of software in which application code is packaged, along with its
+                libraries and dependencies, in common ways so that it can be run anywhere, whether it be on desktop,
+                traditional IT, or the cloud.</p>
+            <h2>Benefits of Containers:</h2>
 
             <ul>
-                <li>Resource efficiency:</li>
-                <p>Server virtualization lets you run several applications each on its own VM with its own OS on a
-                    single physical computer without sacrificing reliability. This enables maximum utilization of the
-                    physical hardware’s computing capacity.</p>
-                <li>Easier management:</li>
-                <p>Replacing physical computers with software defined VMs makes it easier to use and manage policies
-                    written in software. This allows you to create automated IT service management workflows. This means
-                    that they can install those services repeatedly and consistently without cumbersome, time-consuming.
-                    and error-prone manual setup</p>
-                <li>Minimal downtime:</li>
-                <p>OS and application crashes can cause downtime and disrupt user productivity. Admins can run multiple
-                    redundant virtual machines alongside each other and failover between them when problems arise.
-                    Running multiple redundant physical servers is more expensive.</p>
-                <li>Faster provisioning:</li>
-                <p>Buying, installing, and configuring hardware for each application is time-consuming. Provided that
-                    the hardware is already in place, provisioning virtual machines to run all your applications is
-                    significantly faster.</p>
-            </ul>
+                <li>Lightweight:</li>
+                <p>Their smaller size, especially compared to virtual machines, means they can spin up quickly and
+                    better support cloud-native applications that scale horizontally.</p>
+                <li>Portable and platform independent:</li>
+                <p>Containers carry all their dependencies with them, meaning that software can be written once and then
+                    run without needing to be re-configured across laptops, cloud, and on-premises computing
+                    environments.</p>
+                            </ul>
 
             &nbsp;&nbsp;
-            Check out the photo below for a summary of the benefits of VM's.
 
-            <a href=https://www.dnsstuff.com/what-is-vm-virtual-machine> <img src= "images/rsz_virtualmachinebenefits.png"></a>
+            <a href=https://www.dnsstuff.com/what-is-vm-virtual-machine> <img src= "images/containers.png"></a>
 
         </div>
     </div>
