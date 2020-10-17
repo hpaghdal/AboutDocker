@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Setting up a web server to use Docker</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Docker</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item ">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="team.html">Team</a>
+            </li>
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    All things Docker
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="virtualization.html">What is Virtualization?</a>
+                    <a class="dropdown-item" href="containerization.html">What is Containerization?</a>
+                    <a class="dropdown-item" href="">Lets Compare Both</a>
+                    <a class="dropdown-item active" href="setupweb.html">Setting up a web server to use Docker</a>
+                    <a class="dropdown-item" href="">Basic Linux Commands</a>
+                    <a class="dropdown-item" href="">Setting up Docker with Pycharm</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+&nbsp;&nbsp;
+<div class="container">
+
+    <div class="row">
+        <div class="col-10">
+
+            <h1>Docker Information: </h1>
+            <p>Docker is a software technology to create, deploy and run an application or group of applications in containers.
+                A container is a package that contains everything needed to run your application.
+                That includes the operating system and any programs on that operating system that are needed to run the application.
+                </p>
+            <p>Docker is extremely useful for deploying scaling services to production.
+                You can launch new instances which only have to pull your Docker image down and run the entry command to get a running application.
+                It is also useful for developing new applications.</p>
+            <h2>Create Web Server in Docker:</h2>
+            <p>First we want to open the terminal to start the further program.</p>
+            <p>Type up docker ps -a to see what the container are running from the previews project.</p>
+            <p>Type up docker run -d -P –name web nginx using these switches to run site on the background.</p>
+            <p>Type up docker port web to check for the port that you received by running and look at last command.</p>
+            <p>You will get 443/tcp -> 0.0.0.0:32780  and  80/tcp -> 0.0.0.0: 32781</p>
+            <p>Type up docker-machine IP default for the further step</p>
+            <p>You will get 192.168.99.100 this is information to run in the browser.
+                Use 192.168.99.100 and port 32781:  192.168.99.100: 32781
+                Screen will appear on the browser that mean web server is start working.</p>
+        </div>
+    </div>
+
+
+
+    <footer class="text-center mt-10 p-3 mb-2 bg-dark text-white">
+
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
