@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Setting up Docker with Pycharm </title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Docker</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item ">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="team.html">Team</a>
+            </li>
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    All things Docker
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="virtualization.html">What is Virtualization?</a>
+                    <a class="dropdown-item" href="containerization.html">What is Containerization?</a>
+                    <a class="dropdown-item" href="">Lets Compare Both</a>
+                    <a class="dropdown-item" href="setupweb.html">Setting up a web server to use Docker</a>
+                    <a class="dropdown-item" href="basicliuxcommands.html">Basic Linux Commands</a>
+                    <a class="dropdown-item" href="Docker%20with%20Pycharm.html">Setting up Docker with Pycharm</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+&nbsp;&nbsp;
+<div class="container">
+
+    <div class="row">
+        <div class="col-10">
+
+            <h1>Setting up Docker with Pycharm</h1>
+            <p>Create a Python project Quadratic Equation, add the Solver.py file and enter the following code</p>
+            <h2>Configuring Docker as a remote interpreter</h2>
+            <p>Now that we've prepared our example, let's define a Docker-based remote interpreter.
+                Ensure that you have downloaded and installed Python on your computer.</p>
+            <p>If you are in the Settings/Preferences dialog Ctrl+Alt+S select Project <project name> | Python Interpreter.
+                Click the icon and select Add.In the dialog that opens, select the Docker option, from the drop-down
+                lists select the Docker server (if the server is missing, click New),
+                and specify the image name </p>
+            <img src="images/Setting up pycharm pic 1.JPG" height="410" width="875"/>
+
+            <P>As a result, in the Settings dialog, you should see something like this: </P>
+            <img src="images/Setting up pycharm pic 2.JPG" height="488" width="873"/>
+
+            <p>Click OK to apply changes and close the dialog.</p>
+            <h3>Running your application in a Docker container</h3>
+            <p>In the left gutter, next to the main clause, click the
+                button, and choose Run 'Solver.py' command. You see that your script runs in the Docker container.</p>
+            <p>The prefix in the Run tool window shows the container ID.</p>
+            <h4>Debugging your application in a Docker container</h4>
+            <p>Next, let's debug our application. For that, let's put a breakpoint on the line that calculates d, then click and choose Debug 'Solver'.</p>
+            <p>Console tab of the Debug tool window, the debugger runs also in the Docker container</p>
+            <p>But now this container has a different id, and hence - different name. You can see it in the Terminal:
+                type the docker ps command and see the container id and name</p>
+            <h5>Docker tool window</h5>
+            <p>If you have configured Docker as a remote interpreter, you will see the Services tool window button at the bottom side of the main PyCharm window.
+                Click this button and see the docker containers</p>
+
+            <img src="images/Setting up pycharm pic 3.JPG" height="355" width="996"/>
+            <p>First, we are connected to a Docker daemon</p>
+            <img src="images/Setting up pycharm pic 4.JPG" height="227" width="375"/></div>
+            <P>Second, if we open the Run tool window, we will see that the Docker prefix corresponds to the
+                container ID in the Properties tab of the Docker tool window</P>
+             <img src="images/Setting up pycharm pic 5.JPG" height="367" width="862"/>
+
+            <P>open the Debug tool window, we'll see that the Docker prefix (another one) corresponds to another container
+                ID in the Properties tab of the Docker tool window</P>
+             <img src="images/Setting up pycharm pic 6.JPG" height="379" width="868"/>
+            <p>Finally, we see the strange names of the containers</p>
+
+            <p>We created a project and added a Python script. We configured the remote interpreter with PyCharm.
+                We ran and debugged our script in the Docker containers. Finally,
+                 we launched the Docker tool window and saw all the details visible in the Terminal.</p>
+
+        </div>
+    </div>
+    <footer class="text-center mt-10 p-3 mb-2 bg-dark text-white">
+
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
